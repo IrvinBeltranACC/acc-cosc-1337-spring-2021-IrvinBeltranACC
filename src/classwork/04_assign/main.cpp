@@ -28,7 +28,7 @@ int main()
 
 		while (verify_value_parameter == false)
 		{
-			cin>> num;
+			cin >> num;
 			if (num >= 1 && num <= 10)
 			{
 				verify_value_parameter = true;
