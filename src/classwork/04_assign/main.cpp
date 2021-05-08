@@ -1,6 +1,7 @@
 //write includes statements
-#include <iosteam>
+#include <iostream>
 #include "loops.h"
+#include <string>
 
 //write using statements for cin and cout
 
@@ -16,7 +17,7 @@ factorial.  Also, loop continues as long as user wants to.
 int main() 
 {
 	int num;
-	char repeat = "Y";
+	char repeat = 'Y';
 
 	do
 	{
@@ -31,22 +32,22 @@ int main()
 			if (num >= 1 && num <= 10)
 			{
 				verify_value_parameter = true;
+			
+				int factorial_of_num = get_num_factorial(num);
+
+				cout<<"\n\nThe factorial of "<<num<<" is: "<<factorial_of_num;
 			}
 			else
 			{
-				cout<<"\n\n(ERROR) I'm afraid the number you entered was either out of range or written incorrectly, please try aagin: \n\n";
+				cout<<"\n\n(ERROR) I'm afraid the number you entered was either out of range or written incorrectly, please try aagin: ";
 				
 			}
 		}
 
-		int factorial_of_num = get_num_factorial(num);
+		cout<<"\n\nEnter 'Y' to repeat this program, otherwise enter anything else to stop: ";
+		cin >> repeat;
 
-		cout<<"\n\nThe factorial of "<<num<<" is: "<<factorial_of_num;
-		cout<<"\n\nEnter 'Y' or 'Yes' to repeat this program, otherwise enter anything else to end this program, hope I was of use.\n\n";
-
-	}
-
-	}while (repeat == "Y" || repeat == "y" || repeat == "Yes" || repeat == "yes");
+	}while (repeat == 'Y' || repeat == 'y');
 	
 	return 0;
 }
