@@ -39,7 +39,7 @@ double get_gc_content(const string dna)
 
 
 /*
-Write code for function get_reverse_string that
+Write code for function get_reverse_string that 
 accepts a string parameter and returns a string reversed.
 */
 
